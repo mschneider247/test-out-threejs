@@ -49,6 +49,16 @@ Array(200).fill().forEach(addStar)
 const spaceTexture = new THREE.TextureLoader().load('space.jpg');
 scene.background = spaceTexture;
 
+
+const michaelTexture = new THREE.TextureLoader().load('Michael.png');
+
+const michael = new THREE.Mesh(
+  new THREE.BoxGeometry(3,3,3),
+  new THREE.MeshBasicMaterial( { map: michaelTexture })
+);
+
+scene.add(michael);
+
 function animate() {
   requestAnimationFrame( animate );
 
