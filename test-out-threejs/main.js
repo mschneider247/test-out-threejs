@@ -59,6 +59,19 @@ const michael = new THREE.Mesh(
 
 scene.add(michael);
 
+const marsTexture = new THREE.TextureLoader().load('mars.jpg');
+const normalTexture = new THREE.TextureLoader().load('normal.jpg');
+
+const mars = new THREE.Mesh(
+  new THREE.SphereGeometry(3, 32, 32),
+  new THREE.MeshStandardMaterial( {
+    map: marsTexture,
+    normalMap: normalTexture
+  } )  
+);
+
+scene.add(mars);
+
 function animate() {
   requestAnimationFrame( animate );
 
