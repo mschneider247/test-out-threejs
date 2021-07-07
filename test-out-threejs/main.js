@@ -70,6 +70,9 @@ const mars = new THREE.Mesh(
   } )  
 );
 
+mars.position.z = 30;
+mars.position.setX(-10);
+
 scene.add(mars);
 
 function animate() {
