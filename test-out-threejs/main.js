@@ -3,8 +3,6 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 
-// Setup
-
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
@@ -77,16 +75,16 @@ const mars = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
   new THREE.MeshStandardMaterial( {
     map: marsTexture,
-    normalMap: normalTexture
+    normalMap: normalTexture,
   } )  
 );
 
 scene.add(mars);
 
-mars.position.z = 30;
+mars.position.z = -3;
 mars.position.setX(-10);
 
-michael.position.z = -5;
+michael.position.z = -10;
 michael.position.x = 2;
 
 
@@ -115,6 +113,10 @@ function animate() {
   torus.rotation.x += 0.01;
   torus.rotation.y += 0.005;
   torus.rotation.z += 0.01;
+
+  torus.scale.x += 0.01;
+  torus.scale.y += 0.01;
+  torus.scale.z += 0.01;
 
   mars.rotation.x += 0.005;
 
