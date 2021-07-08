@@ -91,15 +91,13 @@ michael.position.x = 2;
 function moveCamera() {
 
   const t = document.body.getBoundingClientRect().top;
-  mars.rotation.x += 0.05;
   mars.rotation.y += 0.075;
-  mars.rotation.z += 0.05;
 
   michael.rotation.y += 0.01;
   michael.rotation.z += 0.01;
 
   camera.position.z = t * -0.01;
-  camera.position.x = t * -0.0002;
+  camera.position.x = t * 0.008;
   camera.position.y = t * -0.0002;
 
 }
@@ -112,13 +110,13 @@ function animate() {
 
   torus.rotation.x += 0.01;
   torus.rotation.y += 0.005;
-  torus.rotation.z += 0.01;
+  torus.rotation.z += 1;
 
   torus.scale.x += 0.01;
   torus.scale.y += 0.01;
   torus.scale.z += 0.01;
 
-  mars.rotation.x += 0.005;
+  // mars.rotation.x += 0.0000001;
 
   // controls.update();
 
